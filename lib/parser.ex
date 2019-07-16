@@ -1,18 +1,17 @@
 defmodule Parser do
-  @moduledoc """
-  Documentation for Parser.
-  """
+  @separator "_*:*_"
+  @delimiter "_*|*_"
 
-  @doc """
-  Hello world.
+  def parse(str) do
+    all = str
+    |> String.split(@delimiter)
+    |> Enum.map(&String.split(&1, @separator))
 
-  ## Examples
+    res = Enum.map(all, fn [id, _times, seconds] ->
+      "#{id}: #{seconds}"
+    end)
+    |> Enum.join("\n")
 
-      iex> Parser.hello()
-      :world
-
-  """
-  def hello do
-    :world
+    res <> "\n"
   end
 end
