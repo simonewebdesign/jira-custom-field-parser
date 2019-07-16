@@ -4,9 +4,17 @@ Nothing interesting here, just a CLI to parse some custom string format.
 
 ## Installation
 
-TODO
+Compile the thing to a binary using `mix escript.build`, or just use the one in the `bin/` folder.
 
-## Notes
+## Usage
+
+Call the executable like:
+
+```
+./parser "<input>"
+```
+
+## Dev Notes
 
   1_*:     *_1_*:  *_17036_*|
 *_3_*:     *_1_*:  *_5495_*|
